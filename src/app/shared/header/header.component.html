@@ -1,0 +1,9 @@
+<header class="main-header">
+  <nav class="nav-container">
+    <div class="nav-links">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      <a routerLink="/cart" routerLinkActive="active">Cart</a>
+      <span>{{StorageService.cartItems().length}}</span>
+    </div>
+  </nav>
+</header>

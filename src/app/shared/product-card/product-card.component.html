@@ -1,0 +1,19 @@
+<div class="card flex justify-content-center"  >
+  <p-card [style]="{ width: '300px' }">
+    <p-carousel [value]="product?.images || []" [numVisible]="1" [numScroll]="1" [circular]="product?.images?.length > 1">
+      <ng-template let-image pTemplate="item">
+        <img [src]="image" [alt]="'Product Image'" class="w-full" />
+      </ng-template>
+    </p-carousel>
+    <ng-template pTemplate="footer">
+      <div class="flex flex-col gap-2 cursor-pointer" (click)="loadProductDetails(product?.id)" >
+        <div class="flex justify-between">
+          <h4>{{ product?.name }}</h4>
+          <span>{{ product?.price }}</span>
+        </div>
+        <span>{{ product?.size }}</span>
+      </div>
+    </ng-template>
+  </p-card>
+</div>
+

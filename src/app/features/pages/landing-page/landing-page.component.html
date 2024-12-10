@@ -1,0 +1,8 @@
+<h1>Inside landing page</h1>
+<button (click)="addItemToCart()">Add Item to Cart</button>
+<div class="products-container gap-4">
+  @for (product of products(); track product?.id) {
+    <app-product-card [product]="product"></app-product-card>
+  }
+</div>
+<h4>landing page completed</h4>
